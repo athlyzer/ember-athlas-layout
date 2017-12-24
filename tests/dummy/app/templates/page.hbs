@@ -1,0 +1,127 @@
+<h1>Page Layout</h1>
+<p>A page layout is designed to show one out of many pages. There is a <code>\{{page-layout}}</code> which is the container for all pages
+and additionally there is a <code>\{{page-switch}}</code> component (if needed). Also they stay separate so you can place them whereever you need them
+in your layout.<br>
+It's primary purpose is to switch between different views (e.g. <i>list</i>, <i>tile</i> or <i>details</i> view of file data).</p>
+
+<h2>Example</h2>
+
+{{#page-switch page=activePage pageChanged=(action 'changePage') as |s|}}
+	{{s.button icon='rocket' value='rocket'}}
+	{{s.button icon='fighter-jet' value='jet'}}
+{{/page-switch}}
+
+{{#page-layout class="border border-dark p-1 mt-2 mb-3" page=activePage as |pages|}}
+	{{#pages.page name='rocket'}}
+		Rocket here
+	{{/pages.page}}
+
+	{{#pages.page name='jet'}}
+		Jet here
+	{{/pages.page}}
+{{/page-layout}}
+
+<h2>Code</h2>
+
+{{#tab-layout as |tab|}}
+	{{#tab.page name='template' label='Template'}}
+		{{code-snippet name="page-layout.hbs"}}
+	{{/tab.page}}
+
+	{{#tab.page name='controller' label='Controller'}}
+		{{code-snippet name="page-layout.js"}}
+	{{/tab.page}}
+{{/tab-layout}}
+
+<h2>Reference</h2>
+
+<h3><code>\{{page-layout}}</code></h3>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Option</th>
+			<th>Type</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>page</td>
+			<td><code>string</code></td>
+			<td>Is the active page, relates to the <code>name</code> attribute of each page.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><code>\{{page-layout.page}}</code></h3>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Option</th>
+			<th>Type</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>name</td>
+			<td><code>string</code></td>
+			<td>Unique name for the page.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><code>\{{page-switch}}</code></h3>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Option</th>
+			<th>Type</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>page</td>
+			<td><code>string</code></td>
+			<td>Is the active page, relates to the <code>name</code> attribute of each page.</td>
+		</tr>
+		<tr>
+			<td>pageChanged</td>
+			<td><code>function</code></td>
+			<td>Handler which is called, when the page has changed.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><code>\{{page-switch.button}}</code></h3>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Option</th>
+			<th>Type</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>value</td>
+			<td><code>string</code></td>
+			<td>When the button is pressed, this value is sent to <code>pageChanged</code> function of <code>\{{page-switch}}</code></td>
+		</tr>
+		<tr>
+			<td>icon</td>
+			<td><code>string</code></td>
+			<td>Displays a font-awesome icon within the button.</td>
+		</tr>
+		<tr>
+			<td>title</td>
+			<td><code>string</code></td>
+			<td>A title which is displayed, when hovering the button</td>
+		</tr>
+	</tbody>
+</table>

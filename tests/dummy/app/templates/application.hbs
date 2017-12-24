@@ -1,3 +1,19 @@
-<h2 id="title">Welcome to Ember</h2>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+	{{#link-to 'index' class="navbar-brand"}}\{{ember-athlas-layout}}{{/link-to}}
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+	 aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarCollapse">
+		<ul class="navbar-nav mr-auto">
+			{{#link-to 'containers' class="nav-link nav-item"}}Containers{{/link-to}}
+			{{#link-to 'page' class="nav-link nav-item"}}Page{{/link-to}}
+			{{#link-to 'tab' class="nav-link nav-item"}}Tab{{/link-to}}
+			{{#link-to 'split' class="nav-link nav-item"}}Split{{/link-to}}
+		</ul>
+	</div>
+</nav>
 
+<main role="main" class="container">
 {{outlet}}
+</main>

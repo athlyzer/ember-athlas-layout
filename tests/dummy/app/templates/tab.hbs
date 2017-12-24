@@ -1,0 +1,101 @@
+<h1>Page Layout</h1>
+<p>Just another tab layout. Works as usual.</p>
+
+<h2>Example</h2>
+
+{{#tab-layout as |tab|}}
+	{{#tab.page label='Page 1'}}
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum molestie euismod. Nullam semper scelerisque lectus
+	sit amet facilisis. Integer sed ante a odio imperdiet scelerisque. Suspendisse sapien ante, ultrices at rutrum et, tristique
+	quis quam. Donec vitae justo maximus, auctor dolor at, aliquet justo. Duis et augue finibus urna ullamcorper faucibus at
+	sed mi. Fusce mattis ipsum ac augue hendrerit auctor. Pellentesque a varius massa, in tempor urna. Nulla ipsum quam, accumsan
+	vel orci dictum, ullamcorper dictum sapien. Suspendisse suscipit orci in hendrerit feugiat. Nunc at metus fermentum, dictum
+	risus eget, malesuada sem.</p>
+	{{/tab.page}}
+
+	{{#tab.page label='Page 2'}}
+	<p>Donec finibus luctus quam, a posuere quam laoreet ut. Nam dignissim velit malesuada neque cursus euismod. Suspendisse dictum
+	felis eu metus vestibulum, eu pellentesque enim ornare. Integer dolor ipsum, consequat at ex vel, tincidunt efficitur urna.
+	Donec at nisl vehicula, efficitur lectus in, malesuada nunc. Sed et feugiat velit, eu vulputate ipsum. Etiam sollicitudin
+	nunc sit amet felis iaculis, id auctor odio tempus. Cras accumsan dui lorem, at consectetur felis consequat vel. Aliquam
+	sollicitudin massa ac cursus maximus. Proin ante tortor, commodo eget neque et, facilisis ullamcorper felis.</p>
+	{{/tab.page}}
+{{/tab-layout}}
+
+<h2>Code</h2>
+
+{{code-snippet name="tab-layout.hbs"}}
+
+<h2>Reference</h2>
+
+<h3><code>\{{tab-layout}}</code></h3>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Option</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>position</td>
+			<td><code>string</code></td>
+			<td>top</td>
+			<td>Position of the tabbar. Available values are: <code>top</code> and <code>bottom</code></td>
+		</tr>
+		<tr>
+			<td>fill</td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Stretches the contents of the tabbar to take all available space.</td>
+		</tr>
+		<tr>
+			<td>justified</td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Makes tabs in the tabbar take equal space.</td>
+		</tr>
+		<tr>
+			<td>shape</td>
+			<td><code>boolean</code></td>
+			<td>tabs</td>
+			<td>The appearance of the tabs. Available values are: <code>tabs</code>, <code>pills</code> and <code>underlined</code></td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><code>\{{tab-layout.page}}</code></h3>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Option</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>name</td>
+			<td><code>string</code></td>
+			<td><code>null</code></td>
+			<td>Unique name for the page.</td>
+		</tr>
+		<tr>
+			<td>label</td>
+			<td><code>string</code></td>
+			<td><code>null</code></td>
+			<td>A label for the page to be used in the tabbar.</td>
+		</tr>
+		<tr>
+			<td>icon</td>
+			<td><code>string</code></td>
+			<td><code>null</code></td>
+			<td>Displays a font-awesome icon within the tab.</td>
+		</tr>
+	</tbody>
+</table>

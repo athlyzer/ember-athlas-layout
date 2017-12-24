@@ -1,0 +1,14 @@
+{{#page-switch page=activePage pageChanged=(action 'changePage') as |switch|}}
+	{{switch.button icon='rocket' value='rocket'}}
+	{{switch.button icon='fighter-jet' value='jet'}}
+{{/page-switch}}
+
+{{#page-layout page=activePage as |pages|}}
+	{{#pages.page name='rocket'}}
+		Rocket here
+	{{/pages.page}}
+
+	{{#pages.page name='jet'}}
+		Jet here
+	{{/pages.page}}
+{{/page-layout}}
