@@ -18,6 +18,7 @@ module.exports = function (defaults) {
 	*/
 
 	app.import('node_modules/bootstrap/dist/css/bootstrap.css');
+	app.import('node_modules/bootstrap/dist/js/bootstrap.js');
 	app.import('node_modules/highlight.js/styles/github-gist.css');
 
 	return app.toTree();

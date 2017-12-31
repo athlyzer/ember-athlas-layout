@@ -1,1 +1,126 @@
-{{outlet}}
+<h1>Split Layout</h1>
+<p>Seperates two blocks of content with a slider to change their size.</p>
+
+<p><b>Note:</b> Split layout takes full dimensions of its parent element. Make sure it has width and/or height set to what you want.</p>
+
+<p><b>Note 2:</b> Split layout reacts to resize changes automatically and will adjust its size.</p>
+
+<p><b>Note 3:</b> Split layout monitors visibility of child blocks. Though, just some basic cases are included.</p>
+
+<p><b>Note 4:</b> If some of the mechanics from note 2 and 3 fail, you manually want to update the split layout, do so by calling: <code>document.querySelector('#my-split-layout').update();</code></p>
+
+<h2>Example</h2>
+
+<div class="alert alert-secondary mx-0">
+	<h4 class="alert-heading">Parameters</h4>
+	<div class="row">
+		<div class="form-group col-md-4">
+			<label>Orientation</label>
+			<div class="form-check">
+				{{#radio-button value="horizontal" groupValue=orientation changed="orientationChanged"}}Horizontal{{/radio-button}}
+				{{#radio-button value="vertical" groupValue=orientation changed="orientationChanged"}}Vertical{{/radio-button}}
+			</div>
+		</div>
+		<div class="form-group col-md-4">
+			<label for="paramPosition">Position</label>
+			{{input value=position class="form-control" id="paramPosition"}}
+		</div>
+		<div class="form-group col-md-4">
+			<label for="paramLimit">Limit [px]</label>
+			{{input value=limit class="form-control" id="paramLimit"}}
+		</div>
+	</div>
+</div>
+
+<div style="height: 350px; border: 1px solid #000;">
+	{{#split-layout orientation=orientation position=position limit=limit}}
+		<div style="background-color: #fff3cd">First Block</div>
+		<div style="background-color: #d1ecf1;">Second Block</div>
+	{{/split-layout}}
+</div>
+
+<h2>Code</h2>
+
+{{code-snippet name="split-layout.hbs"}}
+
+<h2>Reference</h2>
+
+<h3><code>\{{split-layout}}</code></h3>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Option</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>limit</td>
+			<td><code>int</code></td>
+			<td>10</td>
+			<td>A value (in px) to limit the splitter boundaries on each side.</td>
+		</tr>
+		<tr>
+			<td>orientation</td>
+			<td><code>string</code></td>
+			<td>horizontal</td>
+			<td>Sets the orientation for the split layout. Allowed values are: <code>horizontal</code> (north/south) and
+				<code>vertical</code> (east/west).</td>
+		</tr>
+		<tr>
+			<td>position</td>
+			<td><code>string</code></td>
+			<td>50%</td>
+			<td>A CSS unit for the split position at start, examples are: <code>50%</code>or  <code>300px</code>.</td>
+		</tr>
+
+		<tr>
+			<td>positionChanged</td>
+			<td><code>function</code></td>
+			<td><code>undefined</code></td>
+			<td>A function that will be invoked when the position changes</td>
+		</tr>
+		<tr>
+			<td>sash</td>
+			<td><code>string</code></td>
+			<td></td>
+			<td>A CSS selector for an element to be used as sash.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h4>Events</h4>
+
+<p>The <b>\{{split-layout}}</b> emits these events: <code>resizingStarted</code>, <code>resizingStopped</code>, <code>updatingStarted</code> and <code>updatingStopped</code>.</p>
+
+<h4>Element Reference</h4>
+
+<ul>
+	<li>
+		<p><code>void update([boolean force = false])</code></p>
+
+		<b>Parameters</b>
+		<table class="table table-sm table-bordered">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>force</td>
+					<td><code>boolean</code></td>
+					<td><code>false</code></td>
+					<td>By default, split layout will check if it needs to update. Setting this to <code>true</code> will force the update whether needed or not (might be helpful in some situations).</td>
+				</tr>
+			</tbody>
+		</table>
+	</li>
+</ul>
+
