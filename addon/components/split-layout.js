@@ -112,6 +112,11 @@ export default Component.extend(Evented, {
 	create() {
 		const firstChild = document.querySelector(`#${this.get('elementId')} > *:first-child`);
 		const lastChild = document.querySelector(`#${this.get('elementId')} > *:last-child`);
+
+		if (!firstChild && !lastChild) {
+			return;
+		}
+
 		firstChild.classList.add('layout-fill');
 		lastChild.classList.add('layout-fill');
 

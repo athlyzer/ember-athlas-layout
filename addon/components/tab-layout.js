@@ -12,6 +12,8 @@ export default PageLayout.extend({
 	fill: false,
 	justified: false,
 	shape: 'tabs',
+	barClass: '',
+	containerClass: '',
 
 	top: computed('position', function () {
 		return this.get('position') === 'top';

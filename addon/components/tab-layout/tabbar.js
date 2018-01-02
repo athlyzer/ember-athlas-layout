@@ -6,7 +6,7 @@ export default Component.extend({
 	layout,
 	tagName: 'ul',
 	classNames: ['layout-tab-tabbar', 'nav'],
-	classNameBindings: ['container.fill:nav-fill', 'container.justified:nav-justified', 'shape'],
+	classNameBindings: ['container.fill:nav-fill', 'container.justified:nav-justified', 'shape', 'container.barClass'],
 
 	shape: computed('container.shape', function () {
 		switch (this.get('container.shape')) {

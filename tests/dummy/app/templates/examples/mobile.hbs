@@ -2,7 +2,7 @@
 
 
 <div class="layout-container" style="width: 448px; height: 576px; border: 1px solid #000;">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light pane-bb" style="z-index: 1">
 		<a class="navbar-brand" href="#">Navbar</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
 		 aria-expanded="false" aria-label="Toggle navigation">
@@ -21,12 +21,46 @@
 	</nav>
 
 	<div class="layout-fill" style="margin-top: 56px;">
-		{{#tab-layout class="layout-fill" position="bottom" shape="none" justified=true as |tabs|}}
-			{{#tabs.page label='Search'}}
+		{{#tab-layout class="layout-fill" barClass="pane-bt" position="bottom" shape="none" justified=true as |tabs|}}
+			{{#tabs.page label='Home' icon='home' class="p-1"}}
+				<h2>Home</h2>
+				This example uses a bootstrap navbar on top, with a fill-layout container underneath, consuming all the space that's left.
+				In it is a tab layout, with three pages. The directory page has a page layout to provide two views of one hypothetic data model.
+			{{/tabs.page}}
+
+			{{#tabs.page label='Directory' icon='folder'}}
+				<div class="pane pane-justified pane-bb">
+					<span class="pane-title">
+						Directory
+					</span>
+
+					{{#page-switch page=activePage pageChanged=(action 'changePage') as |s|}}
+						{{s.button icon='list' value='list'}}
+						{{s.button icon='th-large' value='tile'}}
+					{{/page-switch}}
+				</div>
+
+				{{#page-layout class="layout-fill" page=activePage as |pages|}}
+					{{#pages.page name='list' class="p-2"}}
+					List View
+					{{/pages.page}}
+
+					{{#pages.page name='tile' class="p-2"}}
+					Tile View
+					{{/pages.page}}
+				{{/page-layout}}
 
 			{{/tabs.page}}
 
-			{{#tabs.page label='Settings'}}
+			{{#tabs.page label='Settings' icon='cog'}}
+				<div class="pane pane-justified pane-bb">
+					<span class="pane-title">
+						Settings
+					</span>
+				</div>
+				<div class="layout-fill p-2">
+					What about some settings here?
+				</div>
 			{{/tabs.page}}
 		{{/tab-layout}}
 	</div>

@@ -1,0 +1,99 @@
+@mixin pane-border {
+	border-color: $pane-border-color;
+	border-style: solid;
+}
+
+.pane {
+	background-color: $pane-color;
+	padding: 8px 10px;
+	// height: 43px;
+	line-height: 31px;
+
+	&.row {
+		padding: 8px 0;
+	}
+
+	&-title {
+		font-size: 18px;
+	}
+
+	&-box {
+		font-size: 0.8rem;
+		border: $pane-border-width $pane-border-color solid;
+		margin: 0;
+	}
+
+	.btn:focus {
+		outline: none;
+	}
+
+	& .btn:not([disabled]):not(.disabled).active {
+		box-shadow: none;
+	}
+
+	&-justified {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	nav {
+		.breadcrumb {
+			display: flex;
+		}
+	}
+
+	&-b {
+		@include pane-border();
+		border-width: 1px;
+
+		&t {
+			@include pane-border();
+			border-width: 1px 0 0 0;
+		}
+
+		&b {
+			@include pane-border();
+			border-width: 0 0 1px 0;
+		}
+
+		&l {
+			@include pane-border();
+			border-width: 0 0 0 1px;
+		}
+
+		&r {
+			@include pane-border();
+			border-width: 0 1px 0 0;
+		}
+
+		&x {
+			@include pane-border();
+			border-width: 0 1px;
+		}
+
+		&y {
+			@include pane-border();
+			border-width: 1px 0;
+		}
+	}
+
+	&-link,
+	&-link:hover {
+		color: #000;
+	}
+
+	&-secondary {
+		background-color: $pane-secondary-color;
+		border-color: $pane-secondary-border-color;
+	}
+
+	// .btn-group {
+	// 	height: 27px;
+	// }
+
+	& + .layout-fill {
+		top: 48px;
+	}
+}
+
