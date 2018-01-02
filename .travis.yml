@@ -46,7 +46,7 @@ script:
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
 
 before_deploy:
-  - node_modules/.bin/ember build
+  - if [ $EMBER_TRY_SCENARIO = "ember-default"]; then node_modules/.bin/ember build; fi;
 
 deploy:
   provider: pages
@@ -55,3 +55,4 @@ deploy:
   local_dir: $TRAVIS_BUILD_DIR/dist
   on:
     branch: master
+    condition: $EMBER_TRY_SCENARIO = ember-default
