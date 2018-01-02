@@ -1,0 +1,77 @@
+<h1>Pane</h1>
+
+<p>Panes are ideal to be used as toolbar or header stripes. Elements within a pane are placed with as much space between them as possible.</p>
+
+<h2>Example</h2>
+
+<div class="pane">
+	<span class="pane-title">I am a title</span>
+
+	<div>Here could be some buttons</div>
+</div>
+
+{{code-snippet name="pane.html"}}
+
+<h2>Borders</h2>
+
+<p>To add borders to panes, use <code>pane-b*</code> classes.</p>
+
+<div class="pane pane-bt mb-2">
+	<code>.pane-bt</code>
+</div>
+
+<div class="pane pane-br mb-2">
+	<code>.pane-br</code>
+</div>
+
+<div class="pane pane-bl mb-2">
+	<code>.pane-bl</code>
+</div>
+
+<div class="pane pane-bb mb-2">
+	<code>.pane-bb</code>
+</div>
+
+<div class="pane pane-bx mb-2">
+	<code>.pane-bx</code>
+</div>
+
+<div class="pane pane-by mb-2">
+	<code>.pane-by</code>
+</div>
+
+<div class="pane pane-b mb-2">
+	<code>.pane-b</code>
+</div>
+
+<h2>Colors</h2>
+
+<p>Extend colors are with <code>.pane-secondary</code> to support two levels of panes.</p>
+
+<div class="pane pane-bb">
+	<code>.pane</code>
+</div>
+
+<div class="pane pane-secondary pane-bb mb-2">
+	<code>.pane-secondary</code>
+</div>
+
+<h2>Bootstrap extensions</h2>
+
+<p>Panes customize bootstraps breadcrumb navigation and buttons, adjusting some of their stylings to fit into panes.</p>
+
+<div class="pane">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Home</a></li>
+			<li class="breadcrumb-item"><a href="#">Library</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Data</li>
+		</ol>
+	</nav>
+
+	<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+		<button type="button" class="btn btn-secondary active">Left</button>
+		<button type="button" class="btn btn-secondary">Middle</button>
+		<button type="button" class="btn btn-secondary">Right</button>
+	</div>
+</div>

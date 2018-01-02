@@ -8,6 +8,10 @@
 	padding: 8px 10px;
 	// height: 43px;
 	line-height: 31px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
 
 	&.row {
 		padding: 8px 0;
@@ -15,12 +19,6 @@
 
 	&-title {
 		font-size: 18px;
-	}
-
-	&-box {
-		font-size: 0.8rem;
-		border: $pane-border-width $pane-border-color solid;
-		margin: 0;
 	}
 
 	.btn:focus {
@@ -31,16 +29,10 @@
 		box-shadow: none;
 	}
 
-	&-justified {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	nav {
-		.breadcrumb {
-			display: flex;
-		}
+	nav .breadcrumb {
+		margin: 0;
+		padding: 0;
+		background-color: transparent;
 	}
 
 	&-b {
@@ -78,19 +70,10 @@
 		}
 	}
 
-	&-link,
-	&-link:hover {
-		color: #000;
-	}
-
 	&-secondary {
 		background-color: $pane-secondary-color;
 		border-color: $pane-secondary-border-color;
 	}
-
-	// .btn-group {
-	// 	height: 27px;
-	// }
 
 	& + .layout-fill {
 		top: 48px;

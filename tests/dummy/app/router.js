@@ -15,6 +15,7 @@ Router.map(function () {
   this.route('examples', function() {
     this.route('mobile');
   });
+  this.route('pane');
 });
 
 export default Router;
