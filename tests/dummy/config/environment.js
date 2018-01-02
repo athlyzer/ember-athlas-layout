@@ -5,7 +5,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'dummy',
     environment,
-    rootURL: '/',
+    rootURL: environment === 'production' ? '/ember-athlas-layout/' : '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
