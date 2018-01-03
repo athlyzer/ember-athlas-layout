@@ -65,6 +65,12 @@
 				cursor: ew-resize;
 			}
 		}
+
+		& > *:first-child,
+		& > *:last-child {
+			 @include layout-fill();
+		}
+
 	}
 
 	/**
