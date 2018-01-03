@@ -117,9 +117,6 @@ export default Component.extend(Evented, {
 			return;
 		}
 
-		firstChild.classList.add('layout-fill');
-		lastChild.classList.add('layout-fill');
-
 		const splitter = document.createElement('div');
 		splitter.classList.add('layout-split-splitter');
 		this.get('element').insertBefore(splitter, lastChild);
@@ -345,7 +342,7 @@ export default Component.extend(Evented, {
 		}
 
 		this.resetChilds();
-		if (this.areChildsVisible() && value !== this.get('recentValue')) {
+		if (this.areChildsVisible() && value !== this.get('recentValue') || force) {
 			this.setPosition(value);
 		}
 
