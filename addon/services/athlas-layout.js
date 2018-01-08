@@ -10,7 +10,5 @@ export default Service.extend({
 	tabPosition: 'top',
 	tabShape: 'tabs',
 	tabFill: false,
-	tabJustified: false,
-	tabBarClass: '',
-	tabContainerClass: ''
+	tabJustified: false
 });

@@ -16,8 +16,6 @@ export default PageLayout.extend({
 	fill: alias('athlas.tabFill'),
 	justified: alias('athlas.tabJustified'),
 	shape: alias('athlas.tabShape'),
-	barClass: alias('athlas.tabBarClass'),
-	containerClass: alias('athlas.tabContainerClass'),
 
 	top: computed('position', function () {
 		return this.get('position') === 'top';
@@ -26,6 +24,12 @@ export default PageLayout.extend({
 	bottom: computed('position', function () {
 		return this.get('position') === 'bottom';
 	}),
+
+	init() {
+		this._super(...arguments);
+		this.set('barClass', '');
+		this.set('containerClass', '');
+	},
 
 	didInsertElement() {
 		this._super(...arguments);
