@@ -3,6 +3,8 @@ import layout from '../templates/components/split-layout';
 import { observer } from '@ember/object';
 import { scheduleOnce } from '@ember/runloop';
 import { isBlank } from '@ember/utils';
+import { alias } from '@ember/object/computed';
+import { inject as service } from '@ember/service';
 import Evented from '@ember/object/evented';
 
 const O_HORIZONTAL = 'horizontal';
@@ -10,13 +12,15 @@ const O_VERTICAL = 'vertical';
 
 export default Component.extend(Evented, {
 	layout,
+	athlas: service('athlas-layout'),
+
 	classNames: ['layout-split'],
 
-	orientation: 'horizontal',
-	position: '50%',
-	limit: 10,
+	orientation: alias('athlas.splitOrientation'),
+	position: alias('athlas.splitPosition'),
+	limit: alias('athlas.splitLimit'),
 
-	unit: '%',
+	unit: '',
 	resizing: false,
 	checkingVisibility: false,
 	updating: false,

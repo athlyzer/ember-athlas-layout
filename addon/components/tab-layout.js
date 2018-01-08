@@ -2,18 +2,22 @@ import PageLayout from './page-layout';
 import layout from '../templates/components/tab-layout';
 import { scheduleOnce } from '@ember/runloop';
 import { computed } from '@ember/object';
+import { alias } from '@ember/object/computed';
+import { inject as service } from '@ember/service';
 
 export default PageLayout.extend({
 	layout,
+	athlas: service('athlas-layout'),
+
 	classNames: ['layout-tab'],
 	classNameBindings: ['position'],
-	position: 'top',
 
-	fill: false,
-	justified: false,
-	shape: 'tabs',
-	barClass: '',
-	containerClass: '',
+	position: alias('athlas.tabPosition'),
+	fill: alias('athlas.tabFill'),
+	justified: alias('athlas.tabJustified'),
+	shape: alias('athlas.tabShape'),
+	barClass: alias('athlas.tabBarClass'),
+	containerClass: alias('athlas.tabContainerClass'),
 
 	top: computed('position', function () {
 		return this.get('position') === 'top';
