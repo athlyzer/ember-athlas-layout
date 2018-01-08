@@ -1,0 +1,62 @@
+<div class="row">
+	<div class="col-md-9 col-xl-10">
+		<h1>Container</h1>
+
+		<p>Some basic containers as wrappers other layouts.</p>
+
+		<h2 id="layout-container">Layout Container</h2>
+		<p>A layout container allows all other layouts to be placed in. Basically it sets the css <code>position</code> attribute to <code>relative</code>
+		so subcontainers can align onto that.</p>
+
+		{{#tab-layout as |tabs|}}
+			{{#tabs.page label="HBS" name="hbs"}}
+				{{code-snippet name="layout-container.hbs"}}
+			{{/tabs.page}}
+
+			{{#tabs.page label="HTML" name="html"}}
+				{{code-snippet name="layout-container.html"}}
+			{{/tabs.page}}
+
+			{{#tabs.page label="CSS" name="css"}}
+				{{code-snippet name="layout-container.css"}}
+			{{/tabs.page}}
+		{{/tab-layout}}
+
+
+		<h2 id="fill-layout">Fill Layout</h2>
+
+		<p>A fill layout takes all the available space. It is designed to construct app layouts.</p>
+
+		{{#tab-layout as |tabs|}}
+			{{#tabs.page label="HBS" name="hbs"}}
+				{{code-snippet name="fill-layout.hbs"}}
+			{{/tabs.page}}
+
+			{{#tabs.page label="HTML" name="html"}}
+				{{code-snippet name="fill-layout.html"}}
+			{{/tabs.page}}
+
+			{{#tabs.page label="CSS" name="css"}}
+				{{code-snippet name="fill-layout.css"}}
+			{{/tabs.page}}
+		{{/tab-layout}}
+
+	</div>
+	<div class="col-md-3 col-xl-2">
+		<ul class="nav flex-column position-fixed">
+			<li>Table of Contents</li>
+
+			<li class="nav-item">
+				<a href="#">Containers</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#layout-container">Layout Container</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#fill-layout">Fill Layout</a>
+			</li>
+		</ul>
+	</div>
+</div>

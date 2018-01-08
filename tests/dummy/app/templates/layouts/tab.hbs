@@ -1,7 +1,9 @@
+<div class="row">
+	<div class="col-md-9 col-xl-10">
 <h1>Tab Layout</h1>
 <p>Just another tab layout. Works as usual.</p>
 
-<h2>Example</h2>
+<h2 id="example">Example</h2>
 
 {{#tab-layout as |tab|}}
 	{{#tab.page label='Page 1'}}
@@ -22,13 +24,13 @@
 	{{/tab.page}}
 {{/tab-layout}}
 
-<h2>Code</h2>
+<h2 id="code">Code</h2>
 
 {{code-snippet name="tab-layout.hbs"}}
 
-<h2>Reference</h2>
+<h2 id="reference">Reference</h2>
 
-<h3><code>\{{tab-layout}}</code></h3>
+<h3 id="reference-tab-layout"><code>\{{tab-layout}}</code></h3>
 
 <table class="table table-sm table-bordered">
 	<thead>
@@ -67,7 +69,7 @@
 	</tbody>
 </table>
 
-<h3><code>\{{tab-layout.page}}</code></h3>
+<h3 id="reference-tab-layout.page"><code>\{{tab-layout.page}}</code></h3>
 
 <table class="table table-sm table-bordered">
 	<thead>
@@ -99,3 +101,40 @@
 		</tr>
 	</tbody>
 </table>
+
+	</div>
+	<div class="col-md-3 col-xl-2">
+		<ul class="nav flex-column position-fixed">
+			<li>Table of Contents</li>
+
+			<li class="nav-item">
+				<a href="#">Tab Layout</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#example">Example</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#code">Code</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#reference">Reference</a>
+
+				<ul class="nav flex-column ml-2">
+					<li class="nav-item">
+						<a href="#reference-tab-layout">
+							<code>\{{tab-layout}}</code>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#reference-tab-layout.page">
+							<code>\{{tab-layout.page}}</code>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>

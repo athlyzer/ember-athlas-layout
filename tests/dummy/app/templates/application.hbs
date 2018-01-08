@@ -6,11 +6,11 @@
 	</button>
 	<div class="collapse navbar-collapse" id="navbarCollapse">
 		<ul class="navbar-nav mr-auto">
-			{{#link-to 'containers' class="nav-link nav-item"}}Containers{{/link-to}}
-			{{#link-to 'page' class="nav-link nav-item"}}Page{{/link-to}}
-			{{#link-to 'tab' class="nav-link nav-item"}}Tab{{/link-to}}
-			{{#link-to 'split' class="nav-link nav-item"}}Split{{/link-to}}
-			{{#link-to 'pane' class="nav-link nav-item"}}Pane{{/link-to}}
+			{{#link-to 'layouts.page' class="nav-link nav-item"}}Page{{/link-to}}
+			{{#link-to 'layouts.tab' class="nav-link nav-item"}}Tab{{/link-to}}
+			{{#link-to 'layouts.split' class="nav-link nav-item"}}Split{{/link-to}}
+			{{#link-to 'layouts.containers' class="nav-link nav-item"}}Containers{{/link-to}}
+			{{#link-to 'layouts.panes' class="nav-link nav-item"}}Pane{{/link-to}}
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Examples
@@ -19,10 +19,17 @@
 					{{#link-to 'examples.mobile' class="dropdown-item"}}Mobile Example{{/link-to}}
 				</div>
 			</li>
+			{{#link-to 'documentation' class="nav-link nav-item"}}Documentation{{/link-to}}
+		</ul>
+
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a href="https://github.com/athlyzer/ember-athlas-layout" class="nav-link"><i class="fa fa-github"></i></a>
+			</li>
 		</ul>
 	</div>
 </nav>
 
-<main role="main" class="container">
+<main role="main" class="container-fluid">
 {{outlet}}
 </main>

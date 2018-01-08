@@ -7,15 +7,18 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function () {
-  this.route('page');
-  this.route('split');
-  this.route('tab');
-  this.route('containers');
-
   this.route('examples', function() {
     this.route('mobile');
   });
-  this.route('pane');
+
+  this.route('layouts', function () {
+      this.route('page');
+      this.route('split');
+      this.route('tab');
+      this.route('panes');
+      this.route('containers');
+});
+  this.route('documentation');
 });
 
 export default Router;

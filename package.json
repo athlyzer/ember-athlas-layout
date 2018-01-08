@@ -1,9 +1,16 @@
 {
   "name": "ember-athlas-layout",
   "version": "0.0.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Layout components for ember.",
   "keywords": [
-    "ember-addon"
+	"ember-addon",
+	"layout",
+	"components",
+	"split-layout",
+	"tab-layout",
+	"page-layout",
+	"view-layout",
+	"toolbar"
   ],
   "license": "MIT",
   "author": "",

@@ -1,0 +1,107 @@
+<div class="row">
+	<div class="col-md-3 col-xl-2"></div>
+	<div class="col-md-6 col-xl-8">
+		<h1>Documentation</h1>
+
+		<h2 id="installation">Installation</h2>
+
+		<p>Run the following command to install this addon:</p>
+
+		{{code-snippet name="install.txt"}}
+
+		<h2 id="styling">Styling</h2>
+		If you do use sass, then you should import them manually:
+
+		{{code-snippet name="app.scss"}}
+
+		<p>Anyway, you are good to go as the styles are included in your <code>vendor.css</code>.</p>
+
+		<h3>Variables</h3>
+
+		<p>To further customize styles, there are a couple of sass variables for manipulation:</p>
+		{{code-snippet name="variables.scss"}}
+
+		<h2 id="defaults">Defaults</h2>
+		<p>To overwrite default values within the layout components, you can do that programmatically using the <code>athlas-layout</code> service:</p>
+
+		{{code-snippet name="service.js"}}
+
+		<p>Here is a reference list with default values, you can overwrite globally:</p>
+
+		<table class="table table-sm table-bordered">
+			<thead>
+				<tr>
+					<th>Property</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>pageSwitchBtnClass</td>
+					<td><code>string</code></td>
+					<td>btn-secondary</td>
+					<td>Page switch button class.</td>
+				</tr>
+				<tr>
+					<td>splitLimit</td>
+					<td><code>integer</code></td>
+					<td>10</td>
+					<td>Split layout sash limit.</td>
+				</tr>
+				<tr>
+					<td>splitOrientation</td>
+					<td><code>string</code></td>
+					<td>horizontal</td>
+					<td>Split layout orientation.</td>
+				</tr>
+				<tr>
+					<td>splitPosition</td>
+					<td><code>string</code></td>
+					<td>50%</td>
+					<td>Split layout position.</td>
+				</tr>
+				<tr>
+					<td>tabFill</td>
+					<td><code>boolean</code></td>
+					<td>false</td>
+					<td>Tab fill flag.</td>
+				</tr>
+				<tr>
+					<td>tabJustified</td>
+					<td><code>boolean</code></td>
+					<td>false</td>
+					<td>Tab justified flag.</td>
+				</tr>
+				<tr>
+					<td>tabPosition</td>
+					<td><code>string</code></td>
+					<td>top</td>
+					<td>Tabbar position.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="col-md-3 col-xl-2">
+		<ul class="nav flex-column position-fixed">
+			<li>Table of Contents</li>
+
+			<li class="nav-item">
+				<a href="#">Documentation</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#installation">Installation</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#styling">Styling</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#defaults">Defaults</a>
+			</li>
+		</ul>
+	</div>
+</div>

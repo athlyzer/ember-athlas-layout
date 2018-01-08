@@ -1,3 +1,5 @@
+<div class="row">
+	<div class="col-md-9 col-xl-10">
 <h1>Split Layout</h1>
 <p>Seperates two blocks of content with a slider to change their size.</p>
 
@@ -9,7 +11,7 @@
 
 <p><b>Note 4:</b> If some of the mechanics from note 2 and 3 fail, you manually want to update the split layout, do so by calling: <code>document.querySelector('#my-split-layout').update();</code></p>
 
-<h2>Example</h2>
+<h2 id="example">Example</h2>
 
 <div class="alert alert-secondary mx-0">
 	<h4 class="alert-heading">Parameters</h4>
@@ -39,13 +41,13 @@
 	{{/split-layout}}
 </div>
 
-<h2>Code</h2>
+<h2 id="code">Code</h2>
 
 {{code-snippet name="split-layout.hbs"}}
 
-<h2>Reference</h2>
+<h2 id="reference">Reference</h2>
 
-<h3><code>\{{split-layout}}</code></h3>
+<h3 id="reference-split-layout"><code>\{{split-layout}}</code></h3>
 
 <table class="table table-sm table-bordered">
 	<thead>
@@ -74,7 +76,7 @@
 			<td>position</td>
 			<td><code>string</code></td>
 			<td>50%</td>
-			<td>A CSS unit for the split position at start, examples are: <code>50%</code>or  <code>300px</code>.</td>
+			<td>A CSS unit for the split position at start, examples are: <code>50%</code> or <code>300px</code>.</td>
 		</tr>
 
 		<tr>
@@ -92,11 +94,18 @@
 	</tbody>
 </table>
 
-<h4>Events</h4>
+<h4 id="reference-split-layout-events">Events</h4>
 
-<p>The <b>\{{split-layout}}</b> emits these events: <code>resizingStarted</code>, <code>resizingStopped</code>, <code>updatingStarted</code> and <code>updatingStopped</code>.</p>
+<p>The <b>\{{split-layout}}</b> emits these events: </p>
 
-<h4>Element Reference</h4>
+<ul>
+	<li><code>resizingStarted</code></li>
+	<li><code>resizingEnded</code></li>
+	<li><code>updatingStarted</code></li>
+	<li><code>updatingEnded</code></li>
+</ul>
+
+<h4 id="reference-split-layout-element">Element Reference</h4>
 
 <ul>
 	<li>
@@ -124,3 +133,43 @@
 	</li>
 </ul>
 
+	</div>
+	<div class="col-md-3 col-xl-2">
+		<ul class="nav flex-column position-fixed">
+			<li>Table of Contents</li>
+
+			<li class="nav-item">
+				<a href="#">Split Layout</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#example">Example</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#code">Code</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#reference">Reference</a>
+
+				<ul class="nav flex-column ml-2">
+					<li class="nav-item">
+						<a href="#reference-split-layout">
+							<code>\{{split-layout}}</code>
+						</a>
+
+						<ul class="nav flex-column ml-2">
+							<li class="nav-item">
+								<a href="#reference-split-layout-events">Events</a>
+							</li>
+							<li class="nav-item">
+								<a href="#reference-split-layout-element">Element</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>

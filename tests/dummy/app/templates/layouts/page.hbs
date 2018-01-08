@@ -1,10 +1,12 @@
+<div class="row">
+	<div class="col-md-9 col-xl-10">
 <h1>Page Layout</h1>
 <p>A page layout is designed to show one out of many pages. There is a <code>\{{page-layout}}</code> which is the container for all pages
 and additionally there is a <code>\{{page-switch}}</code> component (if needed). Also they stay separate so you can place them whereever you need them
 in your layout.<br>
 It's primary purpose is to switch between different views (e.g. <i>list</i>, <i>tile</i> or <i>details</i> view of file data).</p>
 
-<h2>Example</h2>
+<h2 id="example">Example</h2>
 
 {{#page-switch page=activePage pageChanged=(action 'changePage') as |s|}}
 	{{s.button icon='rocket' value='rocket'}}
@@ -21,7 +23,7 @@ It's primary purpose is to switch between different views (e.g. <i>list</i>, <i>
 	{{/pages.page}}
 {{/page-layout}}
 
-<h2>Code</h2>
+<h2 id="code">Code</h2>
 
 {{#tab-layout as |tab|}}
 	{{#tab.page name='template' label='Template'}}
@@ -33,9 +35,9 @@ It's primary purpose is to switch between different views (e.g. <i>list</i>, <i>
 	{{/tab.page}}
 {{/tab-layout}}
 
-<h2>Reference</h2>
+<h2 id="reference">Reference</h2>
 
-<h3><code>\{{page-layout}}</code></h3>
+<h3 id="reference-page-layout"><code>\{{page-layout}}</code></h3>
 
 <table class="table table-sm table-bordered">
 	<thead>
@@ -54,7 +56,7 @@ It's primary purpose is to switch between different views (e.g. <i>list</i>, <i>
 	</tbody>
 </table>
 
-<h3><code>\{{page-layout.page}}</code></h3>
+<h3 id="reference-page-layout.page"><code>\{{page-layout.page}}</code></h3>
 
 <table class="table table-sm table-bordered">
 	<thead>
@@ -73,7 +75,7 @@ It's primary purpose is to switch between different views (e.g. <i>list</i>, <i>
 	</tbody>
 </table>
 
-<h3><code>\{{page-switch}}</code></h3>
+<h3 id="reference-page-switch"><code>\{{page-switch}}</code></h3>
 
 <table class="table table-sm table-bordered">
 	<thead>
@@ -97,7 +99,7 @@ It's primary purpose is to switch between different views (e.g. <i>list</i>, <i>
 	</tbody>
 </table>
 
-<h3><code>\{{page-switch.button}}</code></h3>
+<h3 id="reference-page-switch.button"><code>\{{page-switch.button}}</code></h3>
 
 <table class="table table-sm table-bordered">
 	<thead>
@@ -125,3 +127,34 @@ It's primary purpose is to switch between different views (e.g. <i>list</i>, <i>
 		</tr>
 	</tbody>
 </table>
+
+	</div>
+	<div class="col-md-3 col-xl-2">
+		<ul class="nav flex-column position-fixed">
+			<li>Table of Contents</li>
+
+			<li class="nav-item">
+				<a href="#">Page Layout</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#example">Example</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#code">Code</a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#reference">Reference</a>
+
+				<ul class="nav flex-column ml-2">
+					<li class="nav-item"><a href="#reference-page-layout"><code>\{{page-layout}}</code></a></li>
+					<li class="nav-item"><a href="#reference-page-layout.page"><code>\{{page-layout.page}}</code></a></li>
+					<li class="nav-item"><a href="#reference-page-switch"><code>\{{page-switch}}</code></a></li>
+					<li class="nav-item"><a href="#reference-page-switch"><code>\{{page-switch.button}}</code></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
