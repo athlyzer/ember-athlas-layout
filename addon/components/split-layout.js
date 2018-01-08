@@ -273,7 +273,7 @@ export default Component.extend(Evented, {
 			case 'mouseup':
 			case 'touchend':
 				this.stopResizing(e);
-				this.trigger('resizingStopped');
+				this.trigger('resizingEnded');
 				break;
 
 			case 'mousemove':
@@ -351,7 +351,7 @@ export default Component.extend(Evented, {
 		}
 
 		this.set('updating', false);
-		this.trigger('updatingStopped');
+		this.trigger('updatingEnded');
 	},
 
 	setPosition(value) {
