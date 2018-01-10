@@ -3,14 +3,14 @@
   "version": "0.0.1",
   "description": "Layout components for ember.",
   "keywords": [
-	"ember-addon",
-	"layout",
-	"components",
-	"split-layout",
-	"tab-layout",
-	"page-layout",
-	"view-layout",
-	"toolbar"
+    "ember-addon",
+    "layout",
+    "components",
+    "split-layout",
+    "tab-layout",
+    "page-layout",
+    "view-layout",
+    "toolbar"
   ],
   "license": "MIT",
   "author": "",
@@ -28,7 +28,8 @@
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-sass": "^7.1.2",
-    "highlight.js": "^9.12.0"
+    "highlight.js": "^9.12.0",
+    "popper.js": "^1.12.9"
   },
   "devDependencies": {
     "bootstrap": "4.0.0-beta.3",
@@ -49,7 +50,6 @@
     "ember-export-application-global": "^2.0.0",
     "ember-font-awesome": "^3.1.1",
     "ember-load-initializers": "^1.0.0",
-    "ember-popper": "^0.8.2",
     "ember-radio-button": "^1.2.1",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.18.0",
