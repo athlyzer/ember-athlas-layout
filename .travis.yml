@@ -52,7 +52,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GH_TOKEN
-  local_dir: $TRAVIS_BUILD_DIR/dist
+  local_dir: dist
   on:
     branch: master
     condition: $EMBER_TRY_SCENARIO = ember-default
