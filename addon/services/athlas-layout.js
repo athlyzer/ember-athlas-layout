@@ -3,7 +3,7 @@ import Service from '@ember/service';
 export default Service.extend({
 	pageSwitchBtnClass: 'btn-secondary',
 
-	splitOrientation: 'horizontal',
+	splitOrientation: 'vertical',
 	splitPosition: '50%',
 	splitLimit: 10,
 

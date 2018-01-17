@@ -2,7 +2,6 @@ import PageLayout from './page-layout';
 import layout from '../templates/components/tab-layout';
 import { scheduleOnce } from '@ember/runloop';
 import { computed } from '@ember/object';
-import { alias } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 
 export default PageLayout.extend({
@@ -11,11 +10,6 @@ export default PageLayout.extend({
 
 	classNames: ['layout-tab'],
 	classNameBindings: ['position'],
-
-	position: alias('athlas.tabPosition'),
-	fill: alias('athlas.tabFill'),
-	justified: alias('athlas.tabJustified'),
-	shape: alias('athlas.tabShape'),
 
 	top: computed('position', function () {
 		return this.get('position') === 'top';
@@ -27,8 +21,29 @@ export default PageLayout.extend({
 
 	init() {
 		this._super(...arguments);
-		this.set('barClass', '');
-		this.set('containerClass', '');
+		if (this.get('barClass') === undefined) {
+			this.set('barClass', '');
+		}
+
+		if (this.get('containerClass') === undefined) {
+			this.set('containerClass', '');
+		}
+
+		if (this.get('position') === undefined) {
+			this.set('position', this.get('athlas.tabPosition'));
+		}
+
+		if (this.get('fill') === undefined) {
+			this.set('fill', this.get('athlas.tabFill'));
+		}
+
+		if (this.get('justified') === undefined) {
+			this.set('justified', this.get('athlas.tabJustified'));
+		}
+
+		if (this.get('shape') === undefined) {
+			this.set('shape', this.get('athlas.tabShape'));
+		}
 	},
 
 	didInsertElement() {

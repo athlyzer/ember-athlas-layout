@@ -1,7 +1,6 @@
 import { computed } from '@ember/object';
 import Component from '@ember/component';
 import layout from '../../templates/components/page-switch/button';
-import { alias } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 
 export default Component.extend({
@@ -13,11 +12,18 @@ export default Component.extend({
 	classNameBindings: ['active', 'btnClass'],
 	attributeBindings: ['title'],
 	title: '',
-	btnClass: alias('athlas.pageSwitchBtnClass'),
 
 	active: computed('page', function () {
 		return this.get('page') === this.get('value');
 	}),
+
+	init() {
+		this._super(...arguments);
+
+		if (this.get('btnClass') === undefined) {
+			this.set('btnClass', this.get('athlas.pageSwitchBtnClass'));
+		}
+	},
 
 	click() {
 		this.get('changePage')(this.get('value'));
